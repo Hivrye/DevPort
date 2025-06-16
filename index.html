@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevPort - The Client Portal for Freelance Developers</title>
+    
+    <link rel="icon" href="logo-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,10 +16,10 @@
         :root {
             --primary-blue: #3B82F6;
             --primary-hover: #2563EB;
-            --dark-bg: #030712; /* Even darker for more contrast */
+            --dark-bg: #030712;
             --light-bg: #111827;
             --text-primary: #F9FAFB;
-            --text-secondary: #9CA3AF; /* Slightly lighter for better readability */
+            --text-secondary: #9CA3AF;
             --border-color: #374151;
         }
 
@@ -34,7 +38,7 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-primary);
-            line-height: 1.8; /* Increased line-height for readability */
+            line-height: 1.8;
         }
 
         .container {
@@ -43,7 +47,6 @@
             padding: 0 24px;
         }
 
-        /* MORE BREATHING ROOM: Drastically increased vertical padding */
         section {
             padding: 140px 0;
         }
@@ -54,56 +57,40 @@
         }
 
         h1 {
-            font-size: 3.75rem; /* Slightly larger */
+            font-size: 3.75rem;
             font-weight: 800;
-            margin-bottom: 1.5rem; /* 24px */
+            margin-bottom: 1.5rem;
         }
         
         h2 {
-            font-size: 3rem; /* Larger section titles */
+            font-size: 3rem;
             text-align: center;
-            margin-bottom: 5rem; /* 80px - lots of space */
+            margin-bottom: 5rem;
         }
         
         h3 {
-            font-size: 1.75rem; /* Larger sub-headings */
-            margin-bottom: 1.5rem; /* 24px */
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
         }
 
         p {
             color: var(--text-secondary);
-            font-size: 1.125rem; /* 18px */
+            font-size: 1.125rem;
             margin-bottom: 1rem;
         }
         
         p:last-child {
             margin-bottom: 0;
         }
-
-        /* --- 1. Hero Section --- */
-        .hero {
-            text-align: center;
-            padding: 160px 0; /* More padding */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 750px;
-            margin-bottom: 3rem; /* 48px */
-        }
-
+        
         .cta-button {
             display: inline-block;
             background-color: var(--primary-blue);
             color: white;
-            padding: 18px 40px; /* Larger button */
+            padding: 14px 28px;
             border-radius: 8px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             transition: background-color 0.2s ease;
         }
@@ -112,18 +99,57 @@
             background-color: var(--primary-hover);
         }
 
+        /* --- Navigation Bar Styles --- */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            /* **** UPDATED: Increased height for readability **** */
+            height: 100px; 
+            width: auto;
+        }
+
+        /* --- 1. Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 120px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero .cta-button {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 750px;
+            margin-bottom: 3rem;
+        }
+
         /* --- 2. Pain Section --- */
+        .pain-heading {
+            padding-top: 4rem;
+        }
+
         .pain-points-container {
             display: flex;
             justify-content: space-between;
-            gap: 3rem; /* 48px - More gap */
+            gap: 3rem;
             margin-top: 5rem;
         }
 
         .pain-point {
             background-color: var(--light-bg);
-            padding: 3rem; /* 48px - More internal padding */
-            border-radius: 16px; /* Softer radius */
+            padding: 3rem;
+            border-radius: 16px;
             border: 1px solid var(--border-color);
             text-align: center;
             flex-basis: 31%;
@@ -132,25 +158,25 @@
         .pain-point .icon {
             width: 50px;
             height: 50px;
-            margin-bottom: 2rem; /* 32px */
+            margin-bottom: 2rem;
             color: var(--primary-blue);
         }
 
         /* --- 3. How It Works Section --- */
+        .steps-heading {
+            padding-top: 4rem;
+        }
+
         .how-it-works-steps {
             display: flex;
             flex-direction: column;
-            gap: 8rem; /* 128px - A lot of space between steps */
-        }
-
-        .steps-heading {
-            padding-top: 2rem;
+            gap: 8rem;
         }
         
         .step {
             display: flex;
             align-items: center;
-            gap: 6rem; /* 96px */
+            gap: 6rem;
         }
 
         .step:nth-child(even) {
@@ -170,24 +196,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            color: var(--text-secondary);
+        }
+        
+        .step-visual img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
         
         /* --- 4. Features Section --- */
         .features-heading {
-            padding-top: 2rem;
+            padding-top: 4rem;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem; /* 40px */
+            gap: 2.5rem;
         }
 
         .feature-item {
             background-color: var(--light-bg);
-            padding: 2.5rem; /* 40px */
+            padding: 2.5rem;
             border-radius: 16px;
             border: 1px solid var(--border-color);
         }
@@ -203,8 +233,8 @@
             background-color: var(--light-bg);
             border-radius: 24px;
             text-align: center;
-            padding: 6rem 3rem; /* 96px vertical padding */
-            margin-top: 2rem;
+            padding: 6rem 3rem;
+            margin-top: 4rem;
         }
         
         #cta-final h2 {
@@ -213,34 +243,20 @@
         
         #cta-final p {
             max-width: 650px;
-            margin: 0 auto 3rem; /* 48px */
+            margin: 0 auto 3rem;
         }
         
-        .email-form {
-            display: flex;
-            justify-content: center;
-            gap: 1rem; /* 16px */
-        }
-
-        .email-input {
-            width: 320px;
-            padding: 18px; /* Larger input */
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
-            font-size: 1rem;
-        }
-        
-        .email-input::placeholder {
-            color: #9CA3AF;
-        }
-
-        /* --- Footer --- */
+        /* --- Footer Styles --- */
         footer {
             text-align: center;
-            padding: 8rem 1.5rem 3rem; /* More top padding */
+            padding: 8rem 1.5rem 3rem;
             color: var(--text-secondary);
+        }
+
+        .footer-logo {
+            /* **** UPDATED: Increased height and margin for presence **** */
+            height: 100px;
+            margin-bottom: 2.5rem;
         }
         
         footer a {
@@ -262,32 +278,32 @@
                 flex-direction: column;
                 gap: 3rem;
             }
-            
-            .email-form {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .email-input {
-                width: 100%;
-                max-width: 400px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Section 1: Hero -->
-    <header class="hero container">
-        <h1>Stop Translating Emails. Start Coding.</h1>
-        <p>DevPort is the client portal for freelance developers that replaces messy email chains with a professional, organized dashboard that syncs every client request directly to your GitHub issues.</p>
-        <a href="#cta-final" class="cta-button">Request Early Access</a>
+    <!-- Navigation Bar -->
+    <header class="container">
+        <nav class="nav-bar">
+            <a href="#">
+                <img src="logo-full.png" alt="DevPort Logo" class="logo">
+            </a>
+            <a href="#" target="_blank" class="cta-button">Request Early Access</a>
+        </nav>
     </header>
 
     <main>
+        <!-- Section 1: Hero -->
+        <section class="hero container">
+            <h1>Stop Translating Emails. Start Coding.</h1>
+            <p>DevPort is the client portal for freelance developers that replaces messy email chains with a professional, organized dashboard that syncs every client request directly to your GitHub issues.</p>
+            <a href="YOUR_TALLY_FORM_LINK_HERE" target="_blank" class="cta-button">Request Early Access</a>
+        </section>
+
         <!-- Section 2: Pain Points -->
         <section id="pain" class="container">
-            <h2>Managing the project shouldn't be harder than building it.</h2>
+            <h2 class="pain-heading">Managing the project shouldn't be harder than building it.</h2>
             <div class="pain-points-container">
                 <div class="pain-point">
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.5c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.375m-3.75-3.375h.008v.008h-.008v-.008zM9.75 12h.008v.008H9.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 4.5h.008v.008h-.008v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
@@ -316,21 +332,27 @@
                         <h3>1. Connect Your Repository</h3>
                         <p>Link a DevPort project to your existing GitHub repo. No need to change your development workflow. You live in your code editor and GitHub; we handle the rest.</p>
                     </div>
-                    <div class="step-visual">[ Visual: DevPort Logo <=> GitHub Logo ]</div>
+                    <div class="step-visual">
+                        <img src="devport-github.png" alt="Illustration showing DevPort connecting to GitHub">
+                    </div>
                 </div>
                 <div class="step">
                     <div class="step-text">
                         <h3>2. Invite Your Client to Their Portal</h3>
                         <p>Send your client a private, professional link to their project dashboard. They can see high-level progress, submit new requests, and track the status of everything in one place.</p>
                     </div>
-                    <div class="step-visual">[ Visual: Clean Client Dashboard Mockup ]</div>
+                    <div class="step-visual">
+                        <img src="client-dashboard.png" alt="Mockup of the DevPort client dashboard showing project status and a visual roadmap">
+                    </div>
                 </div>
                 <div class="step">
                     <div class="step-text">
                         <h3>3. Watch the Magic Happen</h3>
                         <p>Client requests are automatically converted into new, detailed issues in your GitHub repo. When you close an issue in GitHub, the status updates for the client. Zero manual work required.</p>
                     </div>
-                    <div class="step-visual">[ Visual: Request Card -> GitHub Issue Card ]</div>
+                    <div class="step-visual">
+                        <img src="devport-sync.png" alt="Illustration showing a client request in DevPort automatically creating a detailed GitHub issue">
+                    </div>
                 </div>
             </div>
         </section>
@@ -371,10 +393,7 @@
             <div id="cta-final">
                 <h2>Ready to Reclaim Your Time?</h2>
                 <p>DevPort is launching soon. Join the waitlist to be the first to know, and lock in a <strong>50% lifetime discount</strong> as a thank you for being an early supporter.</p>
-                <form class="email-form" onsubmit="alert('Not set up yet.'); return false;">
-                    <input type="email" class="email-input" placeholder="your-email@dev.com" required>
-                    <button type="submit" class="cta-button">Get Early Access</button>
-                </form>
+                <a href="#" target="_blank" class="cta-button">Request Early Access</a>
             </div>
         </section>
     </main>
@@ -382,7 +401,11 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <img src="logo-full.png" alt="DevPort Logo" class="footer-logo">
             <p>© 2025 DevPort. The simple client portal for developers. Built by a fellow dev.</p>
+            <p>
+                <a href="https://twitter.com/your_twitter_handle" target="_blank">Follow my progress on X</a>
+            </p>
         </div>
     </footer>
 
